@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💘</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffe6eb;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    h1 { margin-bottom: 30px; }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    #yesBtn { background-color: #ff4d6d; color: white; }
+    #noBtn { background-color: #ccc; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 id="question">Will you be my Valentine? 💖</h1>
+  <button id="yesBtn" onclick="yesClicked()">YES 💘</button>
+  <button id="noBtn" onclick="noClicked()">NO 💔</button>
+</div>
+
+<script>
+  let yesSize = 20;
+  function noClicked() {
+    yesSize += 10;
+    document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+    document.getElementById("noBtn").innerText = "Babe please 🥺";
+  }
+  function yesClicked() {
+    document.querySelector(".container").innerHTML =
+      "<h1>YAYYYY 😍❤️<br>You’re my Valentine 💕</h1>";
+  }
+</script>
+
+</body>
+</html>
